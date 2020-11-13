@@ -1,0 +1,810 @@
+Lightning #
+ROM VER: 1.0.0
+CFG 0c
+<debug_uart> apic id: 0x00000000
+Initializing the firewall .. done
+configured to powergood mode
+
+EPU initialization ... completed
+
+uPctl2 access: ok
+loading imem ++++++++++++++++++++++++++
+major_msg  = 0
+major_msg  = 2
+major_msg  = 1
+major_msg  = a
+major_msg  = fd
+major_msg  = fe
+major_msg  = 4
+major_msg  = 3
+major_msg  = 9
+major_msg  = 7
+done
+
+ x86_uCODE: <APIC ID:0> <CPU ID:0>
+microcode: sig=0x70656 pf=0x1 revision=0x0
+microcode: updated to revision 0x96002601 date=2019-05-29
+microcode_update_intel: Found 1 updates
+
+
+Set BIOS_RESET_DONE bit
+Done.
+<debug_uart> apic id: 0x00000002
+
+ x86_uCODE: <APIC ID:2> <CPU ID:1>
+microcode: sig=0x70656 pf=0x1 revision=0x96002601
+microcode: updated to revision 0x96002601 date=2019-05-29
+microcode_update_intel: Found 1 updates
+<debug_uart> apic id: 0x00000008
+
+ x86_uCODE: <APIC ID:8> <CPU ID:2>
+microcode: sig=0x70656 pf=0x1 revision=0x0
+microcode: updated to revision 0x96002601 date=2019-05-29
+microcode_update_intel: Found 1 updates
+<debug_uart> apic id: 0x0000000a
+
+ x86_uCODE: <APIC ID:A> <CPU ID:3>
+microcode: sig=0x70656 pf=0x1 revision=0x96002601
+microcode: updated to revision 0x96002601 date=2019-05-29
+microcode_update_intel: Found 1 updates
+
+ SPL: <board/intel/lightning/nand_spl_board.c>:<67>:<board_init_f>
+
+ SPL: <board/intel/lightning/../common/nand_spl_loader.c>:<243>:<nand_boot>
+SF: Read data capture delay calibrated to 3 (3 - 4)
+
+ SPL: <addr:0x08000000>
+
+ SPL: <ih_magic:0x27051956>
+
+ SPL: <checksum:0x850cc123>
+
+ SPL: <data:0x08000040>: <len_ptr:0x08000040>
+
+ SPL: <ih_size:0x0002c7b0>: <ih_load:0x08200000>
+
+ SPL: <fn:0x08200000>: <*fn:0x08200000>
+<debug_uart> CPU running at 624 Mhz
+
+
+U-Boot 2016.07-INTEL-v-3.1.187.42-00778-gab1588b8 (Mar 04 2020 - 10:29:04 +0800)
+
+I2C:   ready
+DRAM:
+ <dram_init>
+1 GiB
+Relocating to <0x3ffa3000> with offset <0x37da3000>
+
+ <jump and enter mainloop>
+NAND:  SF: Read data capture delay calibrated to 3 (3 - 4)
+device found, Manufacturer ID: 0xc2, Chip ID: 0x22
+Macronix SPI NAND 2Gbit 3,3v MX35LF2GEAB
+256 MiB
+Bad block table found at page 131008, version 0x01
+Bad block table found at page 130944, version 0x01
+In:    asc@e0a00000
+Out:   asc@e0a00000
+Err:   asc@e0a00000
+Net:   wan no-autoneg 1G
+########## Start to bring up 1G SGMII WAN XPCS 4 ##########
+
+Writing to SR_PMA_CTRL1 register BIT13 for Speed Selection
+
+[WR] SR_PMA_CTRL1: SS13 Speed Selection BIT13, 0 = 1G KX Mode, 1 = 10GBASE-X PCS = 0x00400040
+
+Writing to SR_PMA_CTRL2 register for PMA_TYPE
+
+[WR] SR_PMA_CTRL2: PMA_TYPE BIT3:0, > 0xb is 1G PMA/PMD type, <0xb is 10G PMA/PMD type = 0x000d000d
+
+[WHILE] SERDES Bringup sequence starts
+TX PRESET       :12
+RX PRESET       :5
+
+Set VR_XS_PCS_XAUI_CTRL Bit 0 to XAUI mode = 0
+[WR]VR_XS_PCS_XAUI_CTRL Bit 0 to XAUI mode = 0x00000000
+
+Set SR_XS_PCS_CTRL2 Bit 1:0 PCS Type = 1
+[WR]SR_XS_PCS_CTRL2 Bit 1:0 PCS Type = 0x00010001
+
+Set SR_PMA_CTRL1 Bit 13 SS13 to  = 0
+[WR]SR_PMA_CTRL1 Bit 13 SS13 to 0 = 0x00400040
+
+Set SR_XS_PCS_CTRL1 Setting SS13 bit = 0
+[WR]SR_XS_PCS_CTRL1 Setting SS13 bit = 0x04400440
+
+Set SR_MII_CTRL Setting SS6 BIT6 = 1 and SS13 BIT13 = 0
+[WR]SR_MII_CTRL Setting SS6 BIT6 = 1 and SS13 BIT13 = 0 for 1000Mbps: SR_MII_CTRL = 0x01400140
+
+Set VR_MII_AN_CTRL Setting MII_AN_INTR_EN BIT0 = 1'b1 PCS_MODE BIT2:1 = 2'b10, TX_CONFIG BIT3 = 1'b1
+[WR]VR_MII_AN_CTRL Setting SS6 bit & SS13 bit = 0x000d000d
+########### PMA MPLLB Configuration ############
+mpll_cfg_x2_xpcs_port   : 4
+
+writing to VR_XS_PMA_GEN5_12G_16G_REF_CLK_CTRL register for REF_RANGE BIT and REF_MPLLA_DIV2
+[WR]VR_XS_PMA_GEN5_12G_16G_REF_CLK_CTRL for BIT5:3 REF_RANGE BIT and BIT6 REF_MPLLA_DIV2= 0x00710071
+
+Writing MPLLA_MULTIPLIER register
+[WR]VR_XS_PMA_GEN5_12G_16G_MPLLA_CTRL0 Setting MPLLA_MULTIPLIER bit7:0 = 0x00200020
+
+Writing MPLLA_BANDWIDTH register
+[WR]VR_XS_PMA_GEN5_16G_MPLLA_CTRL3 Setting MPLLA_BANDWIDTH bit15:0 = 0xa035a035
+
+writing to MPLLA_CTRL2 register for MPLLA_DIV_MULT
+[WR]VR_XS_PMA_GEN5_12G_16G_MPLLA_CTRL2 Setting MPLLA DIV8/DIV10/DIV16P5 bits = 0x02000200
+
+Writing to VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1  register for TX VBOOST_LVL[10:8]
+[RD]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1 TX VBOOST_LVL[10:8] = 0x14101410
+[WR]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1 TX VBOOST_LVL[10:8] = 0x14101500
+########### PMA LANE Configuration ############
+
+Writing to VR_XS_PMA_GEN5_12G_16G_MPLL_CMN_CTRL register
+[WR]VR_XS_PMA_GEN5_12G_16G_MPLL_CMN_CTRL Setting BIT0 MPLL_EN_0, BIT4 MPLLB_SEL0, BIT1 MPLL_EN_1, BIT5 MPLLB_SEL_1 = 0x00010001
+
+writing to PHY LANE0 VR_XS_PMA_GEN5_12G_16G_VCO_CAL_LD0 register for VCO_LD_VAL_0 BIT12:0
+[WR]VR_XS_PMA_GEN5_12G_16G_VCO_CAL_LD0 register for VCO_LD_VAL_0 BIT12:0= 0x05400540
+
+writing to PHY LANE0 & 1 VR_XS_PMA_GEN5_16G_VCO_CAL_REF0 register for VCO_REF_LD_0 BIT6:0 and VCO_REF_LD_1 BIT14:8
+[WR]VR_XS_PMA_GEN5_16G_VCO_CAL_REF0 register for VCO_REF_LD_0 BIT5:0 and VCO_REF_LD_0 BIT13:8= 0x002a002a
+
+configuring RX_EQ_CTRL4 register
+[WR]VR_XS_PMA_GEN5_16G_RX_GEN_CTRL4 BIT8 RX_DFE_BYP_0 = 0x00100010
+
+writing to VR_XS_PMA_GEN5_12G_TX_RATE_CTRL register for TX0_RATE BIT2:0
+[RD]VR_XS_PMA_GEN5_12G_16G_TX_RATE_CTRL TX0_RATE BIT2:0 = 0x00000000
+[WR]VR_XS_PMA_GEN5_12G_16G_TX_RATE_CTRL TX0_RATE BIT2:0 = 0x00000003
+[WR]VR_XS_PMA_GEN5_12G_16G_TX_RATE_CTRL TX0_RATE BIT2:0 = 0x00030003
+
+writing to VR_XS_PMA_GEN5_12G_16G_RX_RATE_CTRL register for RX0_RATE BIT2:0
+[RD]VR_XS_PMA_GEN5_12G_16G_RX_RATE_CTRL RX0_RATE BIT1:0 = 0x00000000
+[WR]VR_XS_PMA_GEN5_12G_16G_RX_RATE_CTRL RX0_RATE BIT1:0 = 0x00030003
+
+writing to VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL2 register for TX0_WIDTH BIT9:8
+[RD]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL2 TX0_WIDTH BIT9:8 = 0x02000200
+[WR]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL2 TX0_WIDTH BIT9:8 = 0x01000100
+
+writing to VR_XS_PMA_GEN5_12G_16G_RX_GENCTRL2 register for RX0_WIDTH BIT9:8
+[RD]VR_XS_PMA_GEN5_12G_16G_RX_GENCTRL2 RX0_WIDTH BIT9:8 = 0x02000200
+[WR]VR_XS_PMA_GEN5_12G_16G_RX_GENCTRL2  RX0_WIDTH BIT9:8 = 0x01000100
+
+Writing to VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1   register for VBOOST_EN_0 BIT4
+[RD]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1 TX VBOOST_EN_0 BIT4 = 0x15001500
+[WR]VR_XS_PMA_GEN5_12G_16G_TX_GENCTRL1 VBOOST_EN_0 BIT4 = 0x15101510
+
+writing to PHY RX attenuation Level register
+[RD]VR_XS_PMA_GEN5_12G_16G_RX_ATTN_CTRL BIT2:0 RX0_EQ_ATT_LVL = 0x00000000
+[WR]VR_XS_PMA_GEN5_12G_16G_RX_ATTN_CTRL BIT2:0 RX0_EQ_ATT_LVL = 0x00000000
+
+writing to PHY ctle_pole and boost and gain register
+[WR]VR_XS_PMA_GEN5_12G_16G_RX_GENCTRL3 LOS_TRSHLD_0 BIT2:0      = 0x44524452
+
+writing to VR_XS_PMA_GEN5_16G_RX_PPM_CTRL0 register
+[WR]VR_XS_PMA_GEN5_16G_RX_PPM_CTRL0 BIT4:0 RX0_CDR_PPM_MAX= 0x00120012
+
+writing to VR_XS_PMA_GEN5_16G_RX_CDR_CTRL1 register
+[WR]VR_XS_PMA_GEN5_16G_RX_CDR_CTRL1 BIT9:8 VCO_FRQBAND_0 BIT4 VCO_STEP_CTRL0, BIT0 VCO_TEMP_COMP_EN_0 = 0x01110111
+
+writing to VR_XS_PMA_GEN5_12G_16G_MISC_CTRL0 register
+[WR]VR_XS_PMA_GEN5_12G_16G_MISC_CTRL0 BIT12:8 RX_VREF_CTRL = 0x51005100
+
+writing to VR_XS_PMA_GEN5_16G_RX_MISC_CTRL0 register
+[WR]VR_XS_PMA_GEN5_16G_RX_MISC_CTRL0 BIT7:0 RX0_MISC = 0x00160016
+
+writing to VR_XS_PMA_GEN5_16G_RX_GEN_CTRL4 register to clear RX DFE BYPASS
+[WR]VR_XS_PMA_GEN5_16G_RX_GEN_CTRL4 BIT8 RX_DFE_BYP_0 = 0x01000100
+
+writing to VR_XS_PMA_GEN5_16G_RX_IQ_CTRL0 register to set RX0_DELTA_IQ
+[WR]VR_XS_PMA_GEN5_16G_RX_GEN_CTRL4 BIT11:8 RX0_DELTA_IQ = 0x00000000
+
+writing to VR_XS_PMA_GEN5_16G_RX_EQ_CTRL5 register to set RX_ADPT_SEL_0 and RX0_ADPT_MODE
+[WR]VR_XS_PMA_GEN5_16G_RX_EQ_CTRL5 BIT5:4 RX0_ADPT_MODE BIT0 RX_ADPT_SEL_0 = 0x00000000
+
+writing to PHY LOS threshold register
+[WR]VR_XS_PMA_GEN5_12G_16G_RX_GENCTRL3 LOS_TRSHLD_0 BIT2:0      = 0x00070007
+
+writing to VR_XS_PMA_GEN5_16G_MISC_CTRL2 register
+[WR]VR_XS_PMA_GEN5_16G_MISC_CTRL2 BIT7:0 SUP_MISC[7:0] = 0x00010001
+Configuration TX EQ after VR Reset for XPCS4
+Configuration of CL37 Auto-negotiation Settings.
+
+Set SR_AN_CTRL Setting BIT12 AN_EN = 1'b0 to disable C73 autoneg
+[WR]Set SR_AN_CTRL Setting BIT12 AN_EN = 0x00000000
+
+Set VR_XS_PCS_DIG_CTRL1 Setting AN_ENABLE BIT12 = 1 to enable BP CL37 Autoneg
+[WR]VR_XS_PCS_DIG_CTRL1 Setting AN_ENABLE BIT12 = 0x30003000
+
+Set SR_MII_CTRL Setting AN_ENABLE BIT12 = 0 to enable CL37 Autoneg
+[WR]SR_MII_CTRL Setting AN_ENABLE BIT12 = 0x01400140
+
+Set VR_MII_AN_CTRL Setting MII_AN_INTR_EN BIT0 = 1'b1 PCS_MODE BIT2:1 = 2'b10, TX_CONFIG BIT3 = 1'b1
+[WR] Enabling PCS mode VR_MII_AN_CTRL = 0x01050105
+
+Set VR_MII_DIG_CTRL1 MAC_AUTO_SW BIT0 = 1 for DWC_xpcs adveritses the values of input ports
+[WR]VR_MII_DIG_CTRL1 Setting MAC_AUTO_SW BIT9 = 0x30003000
+
+Configure SR_MII_AN_ADV BIT5 FD to 1 for Full duplex
+[WR]VR_MII_DIG_CTRL1 Setting MAC_AUTO_SW BIT9 = 0x00200020
+
+Set SR_MII_CTRL Setting AN_ENABLE BIT12 = 1 to enable CL37 Autoneg
+[WR]SR_MII_CTRL Setting AN_ENABLE BIT12 = 0x11401140
+
+Port4 1G XPCS and Serdes Bring Up Complete.
+eth0: ethernet@e7150000 [PRIME]
+Hit any key to stop autoboot:  0
+Lightning #
+Lightning #
+Lightning #
+Lightning #
+Lightning # setenv bootargs 'root=/dev/ram rw init=/init earlycon=lantiq,mmio32,0xe0a00000 console=ttyLTQ0,115200n8r maxcpus=4 mem=2048M initcall_debug=0 clk_ignore_unused intel_pstate=disable loglevel=8'
+Lightning #
+Lightning #
+Lightning #
+Lightning # ping 192.168.1.11
+Using ethernet@e7150000 device
+host 192.168.1.11 is alive
+Lightning # run net_ram
+Using ethernet@e7150000 device
+TFTP from server 192.168.1.11; our IP address is 192.168.1.1
+Filename 'openwrt-intel_x86-lgm-CBSP-initramfs-kernel.bin'.
+Load address: 0x8200000
+Loading: #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         #################################################################
+         ###############################################
+         2.3 MiB/s
+done
+Bytes transferred = 30256470 (1cdad56 hex)
+Using ethernet@e7150000 device
+TFTP from server 192.168.1.11; our IP address is 192.168.1.1
+Filename 'openwrt-intel_x86-lgm-CBSP-haps_qspi_nor.dtb'.
+Load address: 0x8000000
+Loading: ######
+         591.8 KiB/s
+done
+Bytes transferred = 75240 (125e8 hex)
+## Booting kernel from Legacy Image at 08200000 ...
+   Image Name:   X86_64 LEDE Linux-4.19
+   Created:      2020-11-13   9:08:46 UTC
+   Image Type:   AMD x86_64 Linux Kernel Image (gzip compressed)
+   Data Size:    30256406 Bytes = 28.9 MiB
+   Load Address: 11000000
+   Entry Point:  11000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 08000000
+   Booting using the fdt blob at 0x8000000
+   Uncompressing Kernel Image ... OK
+   Using Device Tree in place at 08000000, end 080155e7
+
+ WA: CONFIG_ARCH_INTEL_CHD <setup_header_default>
+Valid Boot Flag
+Setup Sectors = 0 (defaulting to 4)
+Setup Size = 0x00000a00
+Magic signature found
+Using boot protocol version 2.0c
+Setup Sectors < 15 - Cannot print kernel version.
+Building boot_params at 0x10090000
+Loading bzImage at address 11000000 (0 bytes)
+Setup at 0x10090000
+Magic signature found
+
+ WA: CONFIG_ARCH_INTEL_CHD <boot_params_default>
+Kernel command line: "root=/dev/ram rw init=/init earlycon=lantiq,mmio32,0xe0a00000 console=ttyLTQ0,115200n8r ethaddr=00:E0:92:00:01:40 maxcpus=4 mem=2048M memmap=4M$12M initcall_debug=0 clk_ignore_unused loglevel=8"
+fdt setup at 0x8000000 size 75240
+## Transferring control to Linux (at address 10090000, kernel 11000000) ...
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.19.60+ (vramuthx@sgsxdev004) (gcc version 6.3.0 (OpenWrt GCC 6.3.0 19.x_intel)) #0 SMP Mon Oct 5 08:41:41 UTC 2020
+[    0.000000] Command line: root=/dev/ram rw init=/init earlycon=lantiq,mmio32,0xe0a00000 console=ttyLTQ0,115200n8r ethaddr=00:E0:92:00:01:40 maxcpus=4 mem=2048M memmap=4M$12M initcall_debug=0 clk_ignore_unused loglevel=8
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000] x86/fpu: x87 FPU will use FXSAVE
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x00000000000bffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000000c0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bfffffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x00000001ffffffff] usable
+[    0.000000] intel_pstate: Passive mode enabled
+[    0.000000] earlycon: lantiq0 at MMIO32 0x00000000e0a00000 (options '')
+[    0.000000] bootconsole [lantiq0] enabled
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] e820: update [mem 0x07fffff0-0x080125e7] usable ==> usable
+[    0.000000] e820: update [mem 0x07fffff0-0x080125e7] usable ==> usable
+[    0.000000] extended physical RAM map:
+[    0.000000] reserve setup_data: [mem 0x0000000000000000-0x00000000000bffff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000000c0000-0x00000000000fffff] reserved
+[    0.000000] reserve setup_data: [mem 0x0000000000100000-0x0000000000bfffff] usable
+[    0.000000] reserve setup_data: [mem 0x0000000000c00000-0x0000000000ffffff] reserved
+[    0.000000] reserve setup_data: [mem 0x0000000001000000-0x0000000007ffffef] usable
+[    0.000000] reserve setup_data: [mem 0x0000000007fffff0-0x00000000080125e7] usable
+[    0.000000] reserve setup_data: [mem 0x00000000080125e8-0x000000007fffffff] usable
+[    0.000000] reserve setup_data: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[    0.000000] reserve setup_data: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] user-defined physical RAM map:
+[    0.000000] user: [mem 0x0000000000000000-0x00000000000bffff] usable
+[    0.000000] user: [mem 0x00000000000c0000-0x00000000000fffff] reserved
+[    0.000000] user: [mem 0x0000000000100000-0x0000000000bfffff] usable
+[    0.000000] user: [mem 0x0000000000c00000-0x0000000000ffffff] reserved
+[    0.000000] user: [mem 0x0000000001000000-0x0000000007ffffef] usable
+[    0.000000] user: [mem 0x0000000007fffff0-0x00000000080125e7] usable
+[    0.000000] user: [mem 0x00000000080125e8-0x000000007fffffff] usable
+[    0.000000] user: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] user: [mem 0x00000000fed00000-0x00000000fed00fff] reserved
+[    0.000000] user: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] tsc: Detected 2496.000 MHz processor
+[    0.000069] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.006684] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.012254] last_pfn = 0x80000 max_arch_pfn = 0x400000000
+[    0.017623] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC
+[    0.024546] BRK [0x13c00000, 0x13c00fff] PGTABLE
+[    0.029084] BRK [0x13c01000, 0x13c01fff] PGTABLE
+[    0.033682] BRK [0x13c02000, 0x13c02fff] PGTABLE
+[    0.038649] BRK [0x13c03000, 0x13c03fff] PGTABLE
+[    0.044342] cma: Reserved 96 MiB at 0x0000000001c00000
+[    0.050502] Zone ranges:
+[    0.051552]   DMA      [mem 0x0000000000100000-0x0000000007ffffff]
+[    0.057714]   DMA32    [mem 0x0000000008000000-0x000000000fffffff]
+[    0.063877]   Normal   [mem 0x0000000010000000-0x000000007fffffff]
+[    0.070039] Movable zone start for each node
+[    0.074292] Early memory node ranges
+[    0.077854]   node   0: [mem 0x0000000000100000-0x0000000000bfffff]
+[    0.084103]   node   0: [mem 0x0000000001000000-0x000000007fffffff]
+[    0.090360] Reserved but unavailable: 22 pages
+[    0.090369] Initmem setup node 0 [mem 0x0000000000100000-0x000000007fffffff]
+[    0.101814] On node 0 totalpages: 523008
+[    0.105718]   DMA zone: 508 pages used for memmap
+[    0.110403]   DMA zone: 24577 pages reserved
+[    0.114658]   DMA zone: 31488 pages, LIFO batch:0
+[    0.125617]   DMA32 zone: 512 pages used for memmap
+[    0.129017]   DMA32 zone: 32768 pages, LIFO batch:7
+[    0.140195]   Normal zone: 7168 pages used for memmap
+[    0.143764]   Normal zone: 458752 pages, LIFO batch:63
+[    0.247885] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-255
+[    0.253587] smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+[    0.258355] [mem 0x80000000-0xfebfffff] available for PCI devices
+[    0.264400] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.274969] setup_percpu: NR_CPUS:4 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.285460] percpu: Embedded 41 pages/cpu s130328 r8192 d29416 u524288
+[    0.290545] pcpu-alloc: s130328 r8192 d29416 u524288 alloc=1*2097152
+[    0.296837] pcpu-alloc: [0] 0 1 2 3
+[    0.300522] Built 1 zonelists, mobility grouping on.  Total pages: 490243
+[    0.307174] Kernel command line: intel_pstate=passive root=/dev/ram rw init=/init earlycon=lantiq,mmio32,0xe0a00000 console=ttyLTQ0,115200n8r ethaddr=00:E0:92:00:01:40 maxcpus=4 mem=2048M memmap=4M$12M initcall_debug=0 clk_ignore_unused loglevel=8
+[    0.332011] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.338991] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.484988] Memory: 1845600K/2092032K available (10268K kernel code, 1153K rwdata, 2484K rodata, 25068K init, 2360K bss, 148128K reserved, 98304K cma-reserved)
+[    0.497978] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.504274] Kernel/User page tables isolation: enabled
+[    0.510404] rcu: Hierarchical RCU implementation.
+[    0.514079] rcu:     RCU event tracing is enabled.
+[    0.519299] NR_IRQS: 4352, nr_irqs: 1024, preallocated irqs: 0
+[    0.525214] Failed to register legacy timer interrupt
+[    0.529446] APIC: Switch to symmetric I/O mode setup
+[    0.534423] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x23fa772cf26, max_idle_ns: 440795269835 ns
+[    0.544954] Calibrating delay loop (skipped), value calculated using timer frequency.. 4992.00 BogoMIPS (lpj=24960000)
+[    0.554903] pid_max: default: 32768 minimum: 301
+[    0.554903] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.554903] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.554903] ENERGY_PERF_BIAS: Set to 'normal', was 'performance'
+[    0.554903] ENERGY_PERF_BIAS: View and update with x86_energy_perf_policy(8)
+[    0.554903] process: using mwait in idle threads
+[    0.554903] Last level iTLB entries: 4KB 48, 2MB 0, 4MB 0
+[    0.554903] Last level dTLB entries: 4KB 256, 2MB 16, 4MB 16, 1GB 0
+[    0.554903] Spectre V2 : Spectre mitigation: kernel not compiled with retpoline; no mitigation available!
+[    0.554903] MDS: Mitigation: Clear CPU buffers
+[    0.554903] Freeing SMP alternatives memory: 24K
+[    0.554903] TSC deadline timer enabled
+[    0.554903] smpboot: CPU0: Intel(R) Atom(TM) Quad IA CPU  @ 2.49GHz (family: 0x6, model: 0x75, stepping: 0x6)
+[    0.555418] Performance Events: PEBS fmt2+, generic architected perfmon, full-width counters, Intel PMU driver.
+[    0.564852] ... version:                3
+[    0.564917] ... bit width:              40
+[    0.568975] ... generic registers:      2
+[    0.572969] ... value mask:             000000ffffffffff
+[    0.574913] ... max period:             0000007fffffffff
+[    0.580194] ... fixed-purpose events:   3
+[    0.584188] ... event mask:             0000000700000003
+[    0.585119] rcu: Hierarchical SRCU implementation.
+[    0.595662] smp: Bringing up secondary CPUs ...
+[    0.599276] x86: Booting SMP configuration:
+[    0.602883] .... node  #0, CPUs:      #1 #2 #3
+[    0.605469] smp: Brought up 1 node, 4 CPUs
+[    0.612518] smpboot: Max logical packages: 1
+[    0.614924] smpboot: Total of 4 processors activated (19968.00 BogoMIPS)
+[    0.637290] random: get_random_u32 called from bucket_table_alloc.isra.8+0x93/0x1b0 with crng_init=0
+[    0.645355] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.654723] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.657910] pinctrl core: initialized pinctrl subsystem
+[    0.662845] NET: Registered protocol family 16
+[    0.665905] Initializing DMA ops for non coherent architecture
+[    0.671103] Detected SoC family Intel Lightning Mountain SoC
+[    0.674925] Detected SoC intel,lightning mountain id:0x90 - rev:0x1.1
+[    0.694943] ++++++++++++++++++++++++++++++++++++++
+[    0.698259] +++++++LJPLL3 CFG0: 0x50000003++++++
+[    0.702857] +++++++LJPLL3 CFG1: 0x2f8086e7++++++
+[    0.704930] +++++++LJPLL3 CFG2: 0x100400fa++++++
+[    0.709497] ++++++++++++++++++++++++++++++++++++++
+[    0.719118] Intel LGM MPS driver, version 2.0.0.0, (c) 2017 - 2019 Intel Corporation
+[    0.725091] ALL OK .
+[    0.727164] MPS: major Id 253
+[    0.730049] Major Id is 252
+[    0.732795] ICC driver registered
+[    0.735247] PCI: Using configuration type 1 for base access
+[    0.748079] cryptd: max_cpu_qlen set to 1000
+[    0.751096] vgaarb: loaded
+[    0.751096] SCSI subsystem initialized
+[    0.775943] pps_core: LinuxPPS API ver. 1 registered
+[    0.779425] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.784949] PTP clock support registered
+[    0.794914] PCI: pci_cache_line_size set to 64 bytes
+[    0.794916] e820: reserve RAM buffer [mem 0x07fffff0-0x07ffffff]
+[    0.807545] clocksource: Switched to clocksource tsc-early
+[    0.845136] NET: Registered protocol family 2
+[    0.848827] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes)
+[    0.855919] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.863185] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+[    0.869898] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.876359] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.882184] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.888826] NET: Registered protocol family 1
+[    3.017676] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    3.022648] software IO TLB: mapped [mem 0x79a00000-0x7da00000] (64MB)
+[    3.030313] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x23fa772cf26, max_idle_ns: 440795269835 ns
+[    3.039259] clocksource: Switched to clocksource tsc
+[    3.044086] clocksource: Nonstop clocksource tsc should not supply suspend/resume interfaces
+[    3.055516] Initialise system trusted keyrings
+[    3.058680] workingset: timestamp_bits=62 max_order=19 bucket_order=0
+[    3.072573] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    3.082205] Key type asymmetric registered
+[    3.084821] Asymmetric key parser 'x509' registered
+[    3.089730] io scheduler noop registered
+[    3.093586] io scheduler deadline registered
+[    3.098011] io scheduler cfq registered (default)
+[    3.102528] io scheduler mq-deadline registered
+[    3.107064] io scheduler kyber registered
+[    3.111625] intel soc-msi e00e0000.soc_msi: Intel SoC MSI init done
+[    3.119614] intel-cdma e0e00000.dma: Init done - rev: a, ports: 6, channels: 16 max chan 22
+[    3.127700] e0a00000.serial: ttyLTQ0 at MMIO 0xe0a00000 (irq = 1, base_baud = 0) is a lantiq,asc
+[    3.135325] console [ttyLTQ0] enabled
+[    3.135325] console [ttyLTQ0] enabled
+[    3.142542] bootconsole [lantiq0] disabled
+[    3.142542] bootconsole [lantiq0] disabled
+[    3.159545] loop: module loaded
+[    3.162281] cadence-qspi ec000000.qspi: registered master spi0
+[    3.167091] spi spi0.1: setup: ignoring unsupported mode bits 200
+[    3.173114] spi spi0.1: setup mode 0, 8 bits/w, 1000000 Hz max --> 0
+[    3.179747] m25p80 spi0.1: mx25l12805d (16384 Kbytes)
+[    3.184517] 4 fixed-partitions partitions found on MTD device ec000000.qspi.1
+[    3.191620] Creating 4 MTD partitions on "ec000000.qspi.1":
+[    3.197173] 0x000000000000-0x000000040000 : "uboot"
+[    3.202749] 0x000000040000-0x0000000c0000 : "uboot_env"
+[    3.207895] 0x0000000c0000-0x000000800000 : "image0"
+[    3.212792] 0x000000800000-0x000001000000 : "image1"
+[    3.217796] cadence-qspi ec000000.qspi: registered child spi0.1
+[    3.223288] libphy: Fixed MDIO Bus: probed
+[    3.227130] tun: Universal TUN/TAP device driver, 1.6
+[    3.232314] [PP_DEV]:__pp_dev_init:675: probe failed (-5)
+[    3.237534] [PP_DEV]:__pp_dev_exit:570: start
+[    3.241887] [PP_DEV]:__pp_dev_exit:576: done
+[    3.246583] reset_control_assert(0)
+[    3.249581] reset_control_assert(1)
+[    3.253052] reset_control_assert(2)
+[    3.257596] reset_control_deassert(0)
+[    3.260213] reset_control_deassert(1)
+[    3.263854] reset_control_deassert(2)
+[    3.277609] p34x_lgm p34x@0: interrupt is raised
+[    3.277629] p34x_lgm p34x@0: IRQ number 13
+[    3.284840] p34x_lgm p34x@0: Can't find mii-bus
+[    3.289417] p34x_lgm: probe of p34x@0 failed with error -22
+[    3.295374] Unable to get node cqm_lgm for lgm-cqm
+[    3.299674] add_cqm_dev(#254): parse_dts fail for lgm-cqm
+[    3.305074] Totally 0 CQM device registered!
+[    3.309963] intel,intel_gptc_wdt watchdog: [intel_gptc_wdt_probe]:[146] gptc_wdt_request fail ret=-1
+[    3.318513] intel_pstate: Intel P-state driver initializing
+[    3.324558] sdhci: Secure Digital Host Controller Interface driver
+[    3.330173] sdhci: Copyright(c) Pierre Ossman
+[    3.334479] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.340724] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    3.346212] gre: GRE over IPv4 demultiplexor driver
+[    3.350452] ip_gre: GRE over IPv4 tunneling driver
+[    3.356604] Initializing XFRM netlink socket
+[    3.360151] NET: Registered protocol family 10
+[    3.471059] Segment Routing with IPv6
+[    3.473423] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    3.480589] ip6_gre: GRE over IPv6 tunneling driver
+[    3.484620] NET: Registered protocol family 17
+[    3.488493] NET: Registered protocol family 15
+[    3.492958] Bridge firewalling registered
+[    3.497029] Registeration is a success The major device number is 247.
+[    3.503520] 8021q: 802.1Q VLAN Support v1.8
+[    3.507835] SSE version of gcm_enc/dec engaged.
+[    3.513896] sched_clock: Marking stable (2962639105, 544903115)->(3618215871, -110673651)
+[    3.521258] registered taskstats version 1
+[    3.524673] Loading compiled-in X.509 certificates
+[    3.534985] intel,intel_gptc_wdt watchdog: [intel_gptc_wdt_probe]:[146] gptc_wdt_request fail ret=-1
+[    3.542881] intel,intel_gptc_wdt watchdog: [intel_gptc_wdt_probe]:[146] gptc_wdt_request fail ret=-1
+[    3.552410] clk: Not disabling u[    3.601862] Freeing unused kernel image memory: 25068K
+[    3.674962] Write protecting the kernel read-only data: 16384k
+[    3.683684] Freeing unused kernel image memory: 1988K
+[    3.690169] Freeing unused kernel image memory: 1612K
+[    3.694373] Run /init as init process
+[    3.707231] init: Console is alive
+[    3.735344] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    3.741733] sd_mod: no symbol version for module_layout
+[    3.747483] secure_service_driver: loading out-of-tree module taints kernel.
+[    3.754777] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    3.770514] init: - preinit -
+[    3.855645] random: jshn: uninitialized urandom read (4 bytes read)
+[    3.886390] random: jshn: uninitialized urandom read (4 bytes read)
+[    3.901849] random: jshn: uninitialized urandom read (4 bytes read)
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    7.077660] procd: - early -
+[    7.690395] procd: - ubus -
+[    7.695969] urandom_read: 3 callbacks suppressed
+[    7.695976] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.742166] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.747386] random: ubusd: uninitialized urandom read (4 bytes read)
+[    7.754310] procd: - init -
+Please press Enter to activate this console.
+[    7.899463] kmodloader: loading kernel modules from /etc/modules.d/*
+[    7.908263] [PP_NAD]:__net_adapter_init:45: start: 1
+[    7.911751] [PP_DEV]:pp_dev_late_init:592: PP init is not done
+[    7.917658] [PP_NAD]:__net_adapter_init:49: pp late init failed, ret = -1
+[    8.007632] [PP_NAD]:__net_adapter_init:45: start: 1
+[    8.011124] [PP_DEV]:pp_dev_late_init:592: PP init is not done
+[    8.016982] [PP_NAD]:__net_adapter_init:49: pp late init failed, ret = -1
+[    8.095156] kmodloader: failed to load pp_net_adapter
+[    8.110887] l2tp_core: L2TP core driver, V2.0
+[    8.114652] l2tp_netlink: L2TP netlink interface
+[    8.122358] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    8.139714] Mirror/redirect action on
+[    8.149511] u32 classifier
+[    8.150742]     Actions configured
+[    8.162298] GACT probability on
+[    8.167321] Simple TC action Loaded
+[    8.184377] Loading modules backported from Linux version v5.1-e93c9c99a629c61837d5a7fc2120cd2b6c70dbdd
+[    8.192382] Backport generated by backports.git v4.19
+[    8.221212] intel,hgu-vuni: probe of vuni failed with error -2
+[    8.242329] [MTLKD] Allocated netdev rtlog0 addr ffff8880130eb000
+[    8.247190] [4294938067] mtlk0(mtlk_cdev_init:311): Max nodes set to 1048575
+[    8.272083] xt_extmark: module license 'GPL v2L' taints kernel.
+[    8.276603] Disabling lock debugging due to kernel taint
+[    8.292986] xt_time: kernel timezone is -0000
+[    8.325404] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    8.390121] cfg80211: Loaded X.509 cert 'iwlwav: 008ae692e70e2f248e'
+[    8.396958] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    8.406400] DC DP [dcmode_ext_init_module:1657] failed to get DP capability!!!
+[    8.467698] [4294938089] mtlk0(__mtlk_print_endianess:9755): The system is Little endian (0xbeadfeed, 0xbeadfeed)
+[    8.476529] [4294938090] mtlk0(__mtlk_print_driver_version:9762): Driver version: 6.1.0_bp.0.27.b2fa9762cea8d4265c2d82d692b0727552b8d6e3.PcieG5.PcieG6.Release
+[    8.559781] PPP generic driver version 2.4.2
+[    8.564076] NET: Registered protocol family 24
+[    8.699520] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    8.727401] PPA API --- init successfully
+[    8.730113] PPA DRV --- init successfully
+[    8.815487] kmodloader: failed to load qos_hal_drv
+[    8.820301] kmodloader: 3 modules could not be probed
+[    8.823959] kmodloader: dependency not loaded qos_hal_drv
+[    8.829362] kmodloader: - lgm_pp_hal_drv - 1
+[    8.833581] kmodloader: - pp_net_adapter - 0
+[    8.837855] kmodloader: - qos_hal_drv - 0
+
+LTM login: r[   10.844960] capability: warning: `procd' uses 32-bit capabilities (legacy support in use)
+oot
+Password:
+
+
+BusyBox v1.30.1 () built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt SNAPSHOT, 19.x_intel
+ -----------------------------------------------------
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~# dd if=/dev/urandom of=/tmp/random.in bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# flash_eraseall /dev/[   30.689033] random: fast init done
+root@OpenWrt:~# flash_eraseall /dev/mtd2
+Erasing 64 Kibyte @ 740000 - 100% complete.
+root@OpenWrt:~# dd if=/tmp/random.in of=/dev/mtd2 bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# dd if=/dev/mtd2 of=/tmp/nor.dump bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# cmp /tmp/nor.dump /tmp/random.in
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~# vi /tmp/nor.dump
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.^B.g$r...fI^].lD ^]P..Gz.Zz%..F^[...~rq}.7N.^G.^?.f^S..7P.     ....lY%.,^Ow...'.7..~..<uR.^R^Q...o*.y.VjR.f~.>...+^[...#^MV^]G.^Xs.D..$'.^O.r.9..#dO....Yf.'
+]....-^CF..^K^U+\^?R...K!r.^E.'.....Rd.F1.Z^R^_x^MJ'...W."...>.. W...^N^Fq..i>.|.^\.$.Mo.!^\^Vhk..QX...^^..^B...rqH....g..P=.0on....7;.#Z.......g(:|}.}f^G..[
+w.^V:y9.lM^O....D..H.@^U.1j.k..)..q.-^Vj^OS...a2.I.V.^[....^S0.ZQ,.$....(&.'.aV>^F-.}~W.^E...[....@^Z^E..F.V..<^\^O.#^O.....4-#y...f6..`..mF.
+P.DT.l.L#(.b#1..8.^D..shZ^MoI..0.JDG`.f.nv^W...Hd..K.91^S.#.g...^D..J^K....n|+(.d9..."...66+.....^X^^.^\.3.:...0.D^Q#v.....M..^?.. ...o^?.^@g^A="w..)|^B?.,..
+o..^A^Q.;...VW...J...<*M...Q.^R....^R^C..{WNUz^F^^KN.0....v..l^A.H..gY.R..v......J&.R..HA...5MrE.8      -...0^K....:..2..Hro.vSu3^H^CL6(.q.}.^M.^RG..;.6.%...
+.V^CJ7.b.S.].5.Z.G{...^CqO^CK.^K..7.a/Ph[..).^V|$^H....^A).N.^N.z. ..^V...d.wT.^Fi^YjGR^P.:s,...L!.^OI....^P}.^C..      D^P.N...V^C^U^TJw.y.rJY..M.....t^E...
+^B...S.fS..v^K^]..~..8..|.i.e|_^\.^Y..^A..^U^T5[.<^YH5^R...^Z.P.wy^Y..<%40...a.2..'g.*t...&"C&N?5
+iFg.^L...$,...^A.W^^#...^E......q^S.Is#.*.^O...l..^NXa8{ew.z^L..^%0..^C^Q.B^K...Do^Wf^A\n3zC^Q^TV..72*.C.
+.9GZ...1....^W.%.8.$.p...^S.;..N.z.U^Z..r|.v.-.^^T^X.g..|...^A."7g..8..^CHI;.-.~Ul.VU....^U^^.g..8$ ....1[Z.F....S^Ch..fJ.G....f$...tb\ .A.E.t^S..I..{,..^[^R
+33ge.#I%B..^GP...u..6F.^P.$^HX$?^@\P..^FO.%F.4^W..S.M..4;.9..?...^e.4..$..xY..j^]v..^V..W..`....D.d.C^M^G.~#.*...#.j|..^Dn..^X.^CS.{.a.G4St..^C.^Au.^U.ti..e3
+,..~.^U.......2...zL...$.!...^E^V.Fb>OI....&.]...W...[+T.|.F^@...
+@^Q..~.G.^N.}...>^FV^\^G....C>.a[.E     #...$8q.J...R^Ya.'.gg..U..^Z..^D^ABPq^X..C..r...^?>.I.5....}....*
+u^HO..> ..F....!^KE#.   ...:=.=4.....G.^G<.a.....>#.L(...       Z.f.q.;..q^VGD.^O^N.g"^N..+.,......@.s<O.k.Ok....,.i.E^Gx"../.^UL<...7..^F.h)^M.q.C..,5@a^X..
+.^_A^M$/@..!.x.~.+gJ...3.P....y.U.Yv^R.1_^B.^C.S~....)...j^[...7X.^^6.F...^B3%./.d.^Yo^@\`.lVy0^O^^P.9.6,^F...." .= TH..^TK.^U^@^X.8..^P_^StX.Rc#.^@}f.s$O@.2
+.e.&.....k.^T..Pi'.PF.{q.p..^G`.Uv^?.^ATf.+..*..4h1..<Q....;.k..|.^Y..mj,....2^X^V...#G*^H.U..`.X^W!..._.h.S...6^R..^S.B....K.`.0^M...^[^F.U.^[.>o^E.`...^S..
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+[    8.406400] DC DP [dcmode_ext_init_module:1657] failed to get DP capability!!!
+[    8.467698] [4294938089] mtlk0(__mtlk_print_endianess:9755): The system is Little endian (0xbeadfeed, 0xbeadfeed)
+[    8.476529] [4294938090] mtlk0(__mtlk_print_driver_version:9762): Driver version: 6.1.0_bp.0.27.b2fa9762cea8d4265c2d82d692b0727552b8d6e3.PcieG5.PcieG6.Release
+[    8.559781] PPP generic driver version 2.4.2
+[    8.564076] NET: Registered protocol family 24
+[    8.699520] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    8.727401] PPA API --- init successfully
+[    8.730113] PPA DRV --- init successfully
+[    8.815487] kmodloader: failed to load qos_hal_drv
+[    8.820301] kmodloader: 3 modules could not be probed
+[    8.823959] kmodloader: dependency not loaded qos_hal_drv
+[    8.829362] kmodloader: - lgm_pp_hal_drv - 1
+[    8.833581] kmodloader: - pp_net_adapter - 0
+[    8.837855] kmodloader: - qos_hal_drv - 0
+
+LTM login: r[   10.844960] capability: warning: `procd' uses 32-bit capabilities (legacy support in use)
+oot
+Password:
+
+
+BusyBox v1.30.1 () built-in shell (ash)
+
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt SNAPSHOT, 19.x_intel
+ -----------------------------------------------------
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~# dd if=/dev/urandom of=/tmp/random.in bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# flash_eraseall /dev/[   30.689033] random: fast init done
+root@OpenWrt:~# flash_eraseall /dev/mtd2
+Erasing 64 Kibyte @ 740000 - 100% complete.
+root@OpenWrt:~# dd if=/tmp/random.in of=/dev/mtd2 bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# dd if=/dev/mtd2 of=/tmp/nor.dump bs=4k count=1
+1+0 records in
+1+0 records out
+root@OpenWrt:~# cmp /tmp/nor.dump /tmp/random.in
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~#
+root@OpenWrt:~# vi /tmp/nor.dump
